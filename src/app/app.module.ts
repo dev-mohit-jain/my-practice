@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MyformComponent } from './myform/myform.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { UsersComponent } from './users/users.component';
+import { FavUserComponent } from './fav-user/fav-user.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    MyformComponent
+    MyformComponent,
+    UsersComponent,
+    FavUserComponent
   ],
   imports: [
     BrowserModule,

@@ -31,6 +31,7 @@
                         <label for="">Email</label><br>
                         <input type="text" name="" id="" placeholder="Email" formControlName="email" [ngClass]="{'is-invalid':Submitted && f.email.errors}">
                         <div *ngIf="Submitted && f.email.errors" class="invalid-feedback">
+                            <div *ngIf="Submitted && f.email.errors.required">Email is required</div>
                             <div *ngIf="Submitted && f.email.errors.pattern">Invalid Formate</div>
                         </div>
                     </div>
@@ -38,7 +39,10 @@
                 <div class="col-6">
                     <div class="form-group">
                         <label for="">Contact no</label><br>
-                        <input type="text" name="" id="" placeholder="Phone no" formControlName="phone">
+                        <input type="text" name="" id="" placeholder="Phone no" formControlName="phone" [ngClass]="{'is-invalid':Submitted && f.phone.errors}">
+                        <div *ngIf="Submitted && f.phone.errors" class="invalid-feedback">
+                            <div *ngIf="Submitted && f.phone.errors.required">Phone No is required</div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-6 text-align-end">
@@ -50,3 +54,4 @@
     </div>
     </div>
 </div>
+
