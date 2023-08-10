@@ -20,9 +20,7 @@ export class UsersComponent {
   }
 
   addToFav(user: any){
-    this.user = user
-    console.log(this.user);
-    
+    this.user = user;
     const myfav = JSON.parse(localStorage.getItem('favData') || '[]')
     const userExists = myfav.some((existingUser:any) => existingUser.fname === this.user.fname);
     console.log(userExists);
