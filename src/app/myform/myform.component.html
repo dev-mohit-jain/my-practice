@@ -1,57 +1,60 @@
-
 <h1>Angular Form</h1>
 
 <div class="container datatable">
     <div class="row">
-    <div class="col-12">
-        <form [formGroup]="addDataForm" (ngSubmit)="addDataFormSubmit()">
-            <div class="row">
-                <div class="col-12">
-                <div class="col-6">
-                    <div class="form-group">
-                    <label for="">First Name</label><br>
-                    <input type="text" name="" id="" placeholder="First Name" formControlName="fname" [ngClass]="{'is-invalid':Submitted && f.fname.errors}">
-                    <div *ngIf="Submitted && f.fname.errors" class="invalid-feedback">
-                        <div *ngIf="Submitted && f.fname.errors.required">First Name is required</div>
-                    </div>
-                    </div>
-                </div>
-                <div class="col-6">
-                    <div class="form-group">
-                    <label for="">Last Name</label><br>
-                    <input type="text" name="" id="" placeholder="Last Name" formControlName="lname" [ngClass]="{'is-invalid':Submitted &&f.lname.errors}">
-                    <div *ngIf="Submitted && f.lname.errors" class="invalid-feedback">
-                        <div *ngIf="Submitted && f.lname.errors.required">Last Name is required</div>
-                        <div *ngIf="Submitted && f.lname.errors.maxlength">Not accept more than 6 character</div>
-                    </div>
-                </div>
-                </div>
-                <div class="col-6">
-                    <div class="form-group">
-                        <label for="">Email</label><br>
-                        <input type="text" name="" id="" placeholder="Email" formControlName="email" [ngClass]="{'is-invalid':Submitted && f.email.errors}">
-                        <div *ngIf="Submitted && f.email.errors" class="invalid-feedback">
-                            <div *ngIf="Submitted && f.email.errors.required">Email is required</div>
-                            <div *ngIf="Submitted && f.email.errors.pattern">Invalid Formate</div>
+        <div class="col-12">
+            <form [formGroup]="addDataForm" (ngSubmit)="addDataFormSubmit()">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="">First Name</label><br>
+                                <input type="text" name="" id="" placeholder="First Name" formControlName="fname"
+                                    [ngClass]="{'is-invalid':Submitted && f.fname.errors}">
+                                <div *ngIf="Submitted && f.fname.errors" class="invalid-feedback">
+                                    <div *ngIf="Submitted && f.fname.errors.required">First Name is required</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="">Last Name</label><br>
+                                <input type="text" name="" id="" placeholder="Last Name" formControlName="lname"
+                                    [ngClass]="{'is-invalid':Submitted &&f.lname.errors}">
+                                <div *ngIf="Submitted && f.lname.errors" class="invalid-feedback">
+                                    <div *ngIf="Submitted && f.lname.errors.required">Last Name is required</div>
+                                    <div *ngIf="Submitted && f.lname.errors.maxlength">Not accept more than 6 character
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="">Email</label><br>
+                                <input type="text" name="" id="" placeholder="Email" formControlName="email"
+                                    [ngClass]="{'is-invalid':Submitted && f.email.errors}">
+                                <div *ngIf="Submitted && f.email.errors" class="invalid-feedback">
+                                    <div *ngIf="Submitted && f.email.errors.required">Email is required</div>
+                                    <div *ngIf="Submitted && f.email.errors.pattern">Invalid Formate</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="">Contact no</label><br>
+                                <input type="text" name="" id="" placeholder="Phone no" formControlName="phone"
+                                    [ngClass]="{'is-invalid':Submitted && f.phone.errors}">
+                                <div *ngIf="Submitted && f.phone.errors" class="invalid-feedback">
+                                    <div *ngIf="Submitted && f.phone.errors.required">Phone No is required</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 text-align-end">
+                            <button type="submit">Submit</button>
                         </div>
                     </div>
                 </div>
-                <div class="col-6">
-                    <div class="form-group">
-                        <label for="">Contact no</label><br>
-                        <input type="text" name="" id="" placeholder="Phone no" formControlName="phone" [ngClass]="{'is-invalid':Submitted && f.phone.errors}">
-                        <div *ngIf="Submitted && f.phone.errors" class="invalid-feedback">
-                            <div *ngIf="Submitted && f.phone.errors.required">Phone No is required</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 text-align-end">
-                    <button type="submit">Submit</button>
-                </div>
-            </div>
-            </div>
-        </form>
-    </div>
+            </form>
+        </div>
     </div>
 </div>
-

@@ -8,9 +8,9 @@ import { Component,OnInit } from '@angular/core';
 export class FavUserComponent {
   favUser:any;
   ngOnInit(){
-    this.getFvaUSer();
+    this.getFavUSer();
   }
-  getFvaUSer(){
+  getFavUSer(){
     this.favUser = JSON.parse(localStorage.getItem('favData') || '[]');
  }
  remove(user:any){
@@ -20,7 +20,7 @@ if(index !== -1){
   this.favUser.splice(index,1);
   localStorage.setItem('favData', JSON.stringify(this.favUser));
   alert("Succesfully removed")
-  this.getFvaUSer();
+  this.getFavUSer();
 }
  }
 }
